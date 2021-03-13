@@ -79,6 +79,15 @@ class MainScreen extends StatelessWidget {
                                       ? null
                                       : AudioService.skipToNext,
                                 ),
+                                IconButton(
+                                  icon: Icon(Icons.play_circle_outline),
+                                  iconSize: 64.0,
+                                  onPressed: () {
+                                    AudioService.playFromMediaId(
+                                        "https://s3.amazonaws.com/scifri-segments/scifri201711241.mp3");
+                                    print("outline press");
+                                  },
+                                )
                               ],
                             ),
                           if (mediaItem?.title != null) Text(mediaItem.title),
